@@ -9,6 +9,7 @@ import { useState } from 'react'
 gsap.registerPlugin(ScrollTrigger)
 
 const images = {
+  logo: '/images/logo_pines.png',
   hero: '/images/hero.jpg',
   herbs: '/images/herbs.png',
   hand: '/images/hand.jpg',
@@ -74,6 +75,9 @@ export default function Page() {
           {/* ── DIRECT TRANSPARENT NAVBAR ── */}
           <header className="reference-nav">
             <nav className="nav-side nav-left" aria-label="Primary navigation left">
+              <a className="nav-brand-link" href="#top" aria-label="Healing Pines Ayurveda Home">
+                <img className="nav-brand-logo" src={images.logo} alt="Healing Pines Ayurveda Logo" />
+              </a>
               <a href="#story">Story</a>
               <a href="#services">Treatments</a>
               <a href="#conditions">Conditions</a>
@@ -258,7 +262,7 @@ export default function Page() {
 
       <footer>
         <a className="brand" href="#top">
-          <span className="brand-mark">✦</span>
+          <img className="brand-logo" src={images.logo} alt="Healing Pines Ayurveda Logo" />
           <span>Healing Pines<small>AYURVEDA CLINIC</small></span>
         </a>
         <p>© 2026 Healing Pines Ayurveda. Rooted in care.</p>
